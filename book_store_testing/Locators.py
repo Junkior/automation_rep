@@ -1,0 +1,17 @@
+class Locator(object):
+    """Home page locators"""
+    read_more_btn = ".product_tag-ruby a:nth-child(2)"
+    review_tab_btn = "reviews_tab"
+    five_stars_button = "star-5"
+    review_field = "comment"
+    name_field = "author"
+    email_field = "email"
+    submit_btn = "submit"
+
+    # read_more_btn = ".product_tag-ruby a:nth-child(2)"
+    # review_tab_btn = "reviews_tab"
+    # five_stars_button = "star-5"
+    # review_field = "comment"
+    # name_field = "author"
+    # email_field = "email"
+    # submit_btn = "submit"
