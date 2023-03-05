@@ -7,6 +7,7 @@ class StartPage(object):
 
         self.startpage_url = driver.get("http://practice.automationtesting.in/")
         self.read_more_btn = driver.find_element(By.CSS_SELECTOR, Locator.read_more_btn)
+        self.my_account_btn = driver.find_element(By.ID, Locator.my_account_btn)
 
     def clickReadMoreButton(self):
         self.read_more_btn.click()
@@ -14,3 +15,6 @@ class StartPage(object):
 
     def goToStartPage(self):
         self.startpage_url
+
+    def goToMyAccount(self):
+        self.my_account_btn.click()

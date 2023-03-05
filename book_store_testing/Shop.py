@@ -37,7 +37,7 @@ assert book_header_txt == "HTML5 Forms"
 
 ###
 driver.delete_all_cookies()
-# ### Количество товаров в категории
+### Количество товаров в категории
 
 # Открыть http://practice.automationtesting.in/
 driver.get("http://practice.automationtesting.in/")
