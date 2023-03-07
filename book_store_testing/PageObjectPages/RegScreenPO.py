@@ -11,7 +11,7 @@ class RegScreen(object):
         self.login_email_field = driver.find_element(By.ID, Locator.login_email_field)
         self.login_password_field = driver.find_element(By.ID, Locator.login_password_field)
         self.login_btn = driver.find_element(By.NAME, Locator.login_btn)
-
+        self.shop_btn = driver.find_element(*Locator.shop_btn)
 
 
     def setEmailRegistrationField(self, email_registration):
@@ -32,7 +32,8 @@ class RegScreen(object):
     def clickLoginButton(self):
         self.login_btn.click()
 
-
+    def clickShopButton(self):
+        self.shop_btn.click()
 
 
 
