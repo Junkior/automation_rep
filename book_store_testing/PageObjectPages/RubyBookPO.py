@@ -5,12 +5,12 @@ from selenium import webdriver
 class RubyBookPage(object):
     def __init__(self, driver):
         self.driver = driver
-        self.review_tab_btn = driver.find_element(By.CLASS_NAME, Locator.review_tab_btn)
-        self.five_stars_button = driver.find_element(By.CLASS_NAME, Locator.five_stars_button)
-        self.review_field = driver.find_element(By.ID, Locator.review_field)
-        self.name_field = driver.find_element(By.ID, Locator.name_field)
-        self.email_field = driver.find_element(By.ID, Locator.email_field)
-        self.submit_btn = driver.find_element(By.ID, Locator.submit_btn)
+        self.review_tab_btn = driver.find_element(*Locator.review_tab_btn)
+        self.five_stars_button = driver.find_element(*Locator.five_stars_button)
+        self.review_field = driver.find_element(*Locator.review_field)
+        self.name_field = driver.find_element(*Locator.name_field)
+        self.email_field = driver.find_element(*Locator.email_field)
+        self.submit_btn = driver.find_element(*Locator.submit_btn)
 
     def clickReviewsButton(self):
         self.review_tab_btn.click()
