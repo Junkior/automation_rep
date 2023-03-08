@@ -2,6 +2,7 @@ from selenium import webdriver
 from book_store_testing.Locators import Locator
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
+
 class ShopPage(object):
     def __init__(self, driver):
         self.driver = driver
@@ -24,16 +25,15 @@ class ShopPage(object):
         assert len(self.products_list_locator) == 3
 
     def checkDefaultSelectorOption(self):
-        option_default = self.shop_page_default_option_locator.get_attribute("selected")
-        assert option_default is not None
+        assert self.shop_page_default_option_locator.get_attribute("selected") is not None
+        print("Выбран метод сортировки по умолчанию")
 
     def sortByDescending(self):
         Select(self.shop_page_filter_selector).select_by_value("price-desc")
 
     def checkDescendingSort(self):
-        desc_option = self.price_desc_option.get_attribute("selected")
-        assert  desc_option is not None
-
+        assert self.price_desc_option.get_attribute("selected") is not None
+        print("Выбран метод сортировки по убыванию цены")
     def openAndroidQuickStartBook(self):
         self.android_quick_guide_book_locator.click()
 

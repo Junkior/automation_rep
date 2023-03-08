@@ -27,7 +27,7 @@ class Locator(object):
     html_category_btn = (By.CSS_SELECTOR, ".cat-item-19>a")
     products_list_locator = (By.CSS_SELECTOR, ".masonry-done li")
     shop_page_default_option_filter_locator = (By.CSS_SELECTOR, ".woocommerce-ordering>select option:nth-child(1)")
-    shop_page_filter_selector = (By.CSS_SELECTOR, ".woocommerce-ordering>select option:nth-child(6)")
+    shop_page_filter_selector = (By.CSS_SELECTOR, ".woocommerce-ordering>select")
     android_quick_guide_book_locator = (By.CSS_SELECTOR, ".post-169>a")
     js_book_locator = (By.CSS_SELECTOR, ".masonry-done li:nth-child(6)>a:nth-child(2)")
     price_desc_option = (By.CSS_SELECTOR, ".woocommerce-ordering>select option:nth-child(6)")
