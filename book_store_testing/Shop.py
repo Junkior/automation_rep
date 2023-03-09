@@ -141,7 +141,7 @@ driver.get("http://practice.automationtesting.in/")
 # Нажать на вкладку "Shop"
 shop_menu_btn = driver.find_element(By.ID, "menu-item-40")
 shop_menu_btn.click()
-# Открыть книгу которая есть в наличии
+# Добавить книгу которая есть в наличии
 js_book_add_to_basket = driver.find_element(By.CSS_SELECTOR, ".masonry-done li:nth-child(6)>a:nth-child(2)")
 js_book_add_to_basket.click()
 driver.refresh()

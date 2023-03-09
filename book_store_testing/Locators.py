@@ -29,12 +29,21 @@ class Locator(object):
     shop_page_default_option_filter_locator = (By.CSS_SELECTOR, ".woocommerce-ordering>select option:nth-child(1)")
     shop_page_filter_selector = (By.CSS_SELECTOR, ".woocommerce-ordering>select")
     android_quick_guide_book_locator = (By.CSS_SELECTOR, ".post-169>a")
-    js_book_locator = (By.CSS_SELECTOR, ".masonry-done li:nth-child(6)>a:nth-child(2)")
     price_desc_option = (By.CSS_SELECTOR, ".woocommerce-ordering>select option:nth-child(6)")
+    js_book_add_to_cart = (By.CSS_SELECTOR, ".masonry-done li:nth-child(6)>a:nth-child(2)")
+    items_cart = (By.CLASS_NAME, "cartcontents")
+    cart_price = (By.CSS_SELECTOR, ".wpmenucart-contents span:nth-child(3)")
+    cart_btn = (By.ID, "wpmenucartli")
 
     """Android quick start guide locators"""
     old_price = (By.CSS_SELECTOR, "del>span")
     new_price = (By.CSS_SELECTOR, "ins>span")
     book_cover = (By.CSS_SELECTOR, ".images>a")
     close_btn_locator = (By.CLASS_NAME, "pp_close")
+
+    """Cart page locators"""
+    subtotal_price_element = (By.CSS_SELECTOR, ".cart-subtotal span")
+    total_price_element = (By.CSS_SELECTOR, "strong>span")
+
+
 
