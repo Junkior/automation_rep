@@ -46,7 +46,11 @@ class ShopPage(object):
 
     """Сравнивает количество товаров в корзине с количеством указанным в amount"""
     def check_cart_items_amount(self, amount):
-        assert self.items_cart.text == f"{amount} Item" ##НЕ ЗАБУДЬ ДОБАВИТЬ ITEM->ITEMS
+        if amount == "1":
+            assert self.items_cart.text == f"{amount} Item"
+        else:
+            assert self.items_cart.text == f"{amount} Items"
+
 
     """Сравнивает сумму товаров в корзине с суммой указанной в items_sum, сумму указывать с .00"""
     def check_cart_items_sum(self, items_sum):
