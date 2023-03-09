@@ -32,5 +32,9 @@ class Locator(object):
     js_book_locator = (By.CSS_SELECTOR, ".masonry-done li:nth-child(6)>a:nth-child(2)")
     price_desc_option = (By.CSS_SELECTOR, ".woocommerce-ordering>select option:nth-child(6)")
 
-
+    """Android quick start guide locators"""
+    old_price = (By.CSS_SELECTOR, "del>span")
+    new_price = (By.CSS_SELECTOR, "ins>span")
+    book_cover = (By.CSS_SELECTOR, ".images>a")
+    close_btn_locator = (By.CLASS_NAME, "pp_close")
 

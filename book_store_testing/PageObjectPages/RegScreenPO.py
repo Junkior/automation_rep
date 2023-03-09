@@ -35,6 +35,11 @@ class RegScreen(object):
     def clickShopButton(self):
         self.shop_btn.click()
 
+    def login_to_account(self):
+        self.setEmailLoginField("oxample_test@gmail.com")
+        self.setPasswordLoginField("_6Words_!")
+        self.clickLoginButton()
+
 
 
 
