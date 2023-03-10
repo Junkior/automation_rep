@@ -44,6 +44,14 @@ class Locator(object):
     """Cart page locators"""
     subtotal_price_element = (By.CSS_SELECTOR, ".cart-subtotal span")
     total_price_element = (By.CSS_SELECTOR, "strong>span")
+    remove_book_btn = (By.CSS_SELECTOR, ".product-remove>a")
+    undo_btn = (By.CSS_SELECTOR, ".woocommerce-message>a")
+    quantity_field = (By.CLASS_NAME, "qty")
+    apply_coupon_btn = (By.NAME, "apply_coupon")
+    coupon_msg_error = (By.CLASS_NAME, "woocommerce-error")
+    checkout_btn = (By.CLASS_NAME, "checkout-button")
+    update_basket_btn = (By.NAME, "update_cart")
+
 
 
 

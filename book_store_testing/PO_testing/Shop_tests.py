@@ -88,3 +88,40 @@ cart_page.check_subtotal_price("350.00")
 cart_page.check_total_price("357.00")
 ###
 driver.quit()
+###
+driver = DriverSet.browser()
+
+### Работа в корзине
+# Открыть http://practice.automationtesting.in/
+start_page = StartPage(driver)
+# Нажать на вкладку "Shop"
+start_page.go_to_shop()
+# обавить книгу которая есть в наличии
+shop_page = ShopPage(driver)
+shop_page.add_js_book_to_cart()
+driver.refresh()
+# Перейти в корзину
+shop_page = ShopPage(driver)
+shop_page.go_to_cart()
+# Удалить книгу из корзины
+cart_page = CartPage(driver)
+cart_page.remove_book_from_cart()
+# Дождаться появления кнопки undo
+cart_page.wait_undo_button_appearance()
+# Нажать на undo
+cart_page.click_undo_btn()
+# Очистить количество товаров и добавить три товара
+cart_page = CartPage(driver)
+cart_page.set_quantity_field_amount(3)
+# Обновить корзину
+cart_page.update_cart()
+# Проверить что количество элемнтов == 3
+cart_page.check_quantity_field_amount("3")
+time.sleep(3)
+# Нажать apply coupon
+cart_page = CartPage(driver)
+cart_page.click_apply_coupon()
+# Проверить наличие ошибки добавления купона
+cart_page.check_coupon_message_error()
+#
+driver.quit()
