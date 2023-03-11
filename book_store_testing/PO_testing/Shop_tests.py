@@ -1,6 +1,7 @@
 import time
 
 from selenium import webdriver
+from book_store_testing.PageObjectPages.OrderPagePO import OrderPage
 from book_store_testing.PageObjectPages.ShopPagePO import ShopPage
 from book_store_testing.PageObjectPages.StartPagePO import StartPage
 from book_store_testing.PageObjectPages.RegScreenPO import RegScreen
@@ -124,4 +125,46 @@ cart_page.click_apply_coupon()
 # Проверить наличие ошибки добавления купона
 cart_page.check_coupon_message_error()
 #
+driver.quit()
+#
+driver = DriverSet.browser()
+### Покупка товара
+# Открыть http://practice.automationtesting.in/
+start_page = StartPage(driver)
+# Нажать на вкладку "Shop"
+start_page.go_to_shop()
+# обавить книгу которая есть в наличии
+shop_page = ShopPage(driver)
+shop_page.add_js_book_to_cart()
+driver.refresh()
+# Перейти в корзину
+shop_page = ShopPage(driver)
+shop_page.go_to_cart()
+# Нажать "PROCEED TO CHECKOUT"
+cart_page = CartPage(driver)
+cart_page.click_checkout_btn()
+# Заполнить все обязательные поля
+order_page = OrderPage(driver)
+order_page.wait_first_name_presence()
+order_page.set_first_name_field()
+order_page.set_last_name_field()
+order_page.set_email_field()
+order_page.set_phone_field()
+order_page.set_country()
+order_page.set_address()
+order_page.set_city()
+order_page = OrderPage(driver)
+order_page.set_state()
+order_page.set_zipcode()
+# Выбрать способ оплаты "Check Payments"
+order_page.scroll_by()
+order_page = OrderPage(driver)
+order_page.set_payment_to_check_payments()
+# 8. Нажать PLACE ORDER
+order_page.click_place_order()
+#  Проверить что отображается надпись "Thank you. Your order has been received."
+order_page.check_success_order_message()
+# Проверить что в Payment Method отображается текст "Check Payments"
+order_page.check_payment_methode_check_payments()
+###
 driver.quit()

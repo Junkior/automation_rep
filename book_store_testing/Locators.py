@@ -51,6 +51,23 @@ class Locator(object):
     coupon_msg_error = (By.CLASS_NAME, "woocommerce-error")
     checkout_btn = (By.CLASS_NAME, "checkout-button")
     update_basket_btn = (By.NAME, "update_cart")
+    checkout_btn = (By.CLASS_NAME, "checkout-button")
+
+    """Order page locators"""
+    first_name = (By.ID, "billing_first_name")
+    last_name = (By.ID, "billing_last_name")
+    order_email_field = (By.ID, "billing_email")
+    phone = (By.ID, "billing_phone")
+    country_selector = (By.ID, "s2id_billing_country")
+    country_selector_search_field = (By.ID, "s2id_autogen1_search")
+    address = (By.ID, "billing_address_1")
+    city = (By.ID, "billing_city")
+    state = (By.ID, "billing_state")
+    zip_code = (By.ID, "billing_postcode")
+    check_payments_radio = (By.ID, "payment_method_cheque")
+    place_order_btn = (By.ID, "place_order")
+    success_order_message = (By.CLASS_NAME, "woocommerce-thankyou-order-received")
+    payment_method = (By.CSS_SELECTOR, "tfoot tr:nth-child(3)>td")
 
 
 

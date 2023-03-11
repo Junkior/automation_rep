@@ -66,3 +66,6 @@ class CartPage(object):
     def check_coupon_message_error(self, error_text="Please enter a coupon code."):
         assert self.driver.find_element(*self.coupon_message_error).text == error_text
 
+    def click_checkout_btn(self):
+        self.checkout_btn.click()
+
